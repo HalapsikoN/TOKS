@@ -1,0 +1,7 @@
+﻿  main.cpp
+d:\5\toks\lab2\lab1\main.cpp(94): warning C4101: str: неиспользованная локальная переменная
+  Exception.cpp
+  COM.cpp
+  Создание кода...
+  lab1.vcxproj -> D:\5\TOKS\lab2\Debug\lab1.exe
+  lab1.vcxproj -> D:\5\TOKS\lab2\Debug\lab1.pdb (Full PDB)
