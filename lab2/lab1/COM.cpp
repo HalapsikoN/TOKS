@@ -144,19 +144,11 @@ void COM::WritePackage(const uint8_t* data) {
 		temp[i] = data[i];
 	}
 	temp[i] = '\0';
-	//cout << temp << endl;
 
 	int last = ++i;
 	temp[last] = flag;
 	
-	/*for (i = last+1; i>0; --i) {
-		temp[i] = temp[i - 1];
-	}
-	last++;
-	temp[0] = flag;*/
 	paste(temp, flag, 0, last);
-	//cout << temp << endl;
-	//cout << last << endl;
 
 	for (i = 1; i < last - 1; ++i) {
 		if (temp[i] == changeSymbol) {
@@ -170,7 +162,6 @@ void COM::WritePackage(const uint8_t* data) {
 		}
 	}
 
-	//cout << last << endl;
 	for (i = 0; i <= last; ++i) {
 		Write((uint8_t*)&temp[i], 1);
 	}
@@ -184,7 +175,6 @@ void COM::cut(uint8_t* str, int elementToCut, int&last) {
 }
 
 void COM::ReadPackage(uint8_t* str) {
-	//uint8_t str[200];
 	uint8_t temp = 'a';
 
 	while (temp != flag) {
@@ -200,8 +190,6 @@ void COM::ReadPackage(uint8_t* str) {
 		str[i] = temp;
 	}
 	int last = i;
-
-	//cout << "chtoto: "<<str << endl;
 	
 	for (i = 0; i <= last; ++i) {
 		if (str[i] == changeSymbol) {
@@ -214,5 +202,4 @@ void COM::ReadPackage(uint8_t* str) {
 			}
 		}
 	}
-	//cout << "chtoto: " << str << endl;
 }
