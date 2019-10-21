@@ -1,0 +1,8 @@
+﻿  main.cpp
+d:\5\toks\lab3\kodxeminga\kodxeminga\main.cpp(60): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+d:\5\toks\lab3\kodxeminga\kodxeminga\main.cpp(105): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+d:\5\toks\lab3\kodxeminga\kodxeminga\main.cpp(130): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+d:\5\toks\lab3\kodxeminga\kodxeminga\main.cpp(179): warning C4244: инициализация: преобразование "unsigned long" в "char", возможна потеря данных
+d:\5\toks\lab3\kodxeminga\kodxeminga\main.cpp(180): warning C4244: инициализация: преобразование "unsigned long" в "uint16_t", возможна потеря данных
+  kodXeminga.vcxproj -> D:\5\TOKS\lab3\kodXeminga\Debug\kodXeminga.exe
+  kodXeminga.vcxproj -> D:\5\TOKS\lab3\kodXeminga\Debug\kodXeminga.pdb (Full PDB)
