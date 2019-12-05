@@ -61,11 +61,11 @@ int main()
 
 	for (int attempt = 0; attempt < 10; attempt++)
 	{
+		cout << endl;
 		Sleep(1);
 		strcpy_s(szBuf, startMessage);
 		int timeDelay = delay(100, 100 * pow(2, attempt));
 		cout << timeDelay<<endl;
-		cout << endl;
 		Sleep(timeDelay);
 		WriteFile(hNamedPipe1, szBuf, BUFSIZ, &cbWritten, NULL);
 		WaitForSingleObject(hSemaphore1, INFINITE);
@@ -110,6 +110,7 @@ int main()
 		}
 		cbRead = 0;
 	}
+	cout << endl << "All attempts were used. Can't send the message." << endl;
 	system("pause");
 	return 0;
 }

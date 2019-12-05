@@ -85,8 +85,9 @@ void Heming::writeNumberToCode()
 		{
 			result[i] = number[k--];
 		}
+		//cout << "TYT:" << result << endl;
 	}
-	//cout << result << endl;
+	cout <<"TYT:"<< result << endl;
 }
 
 void Heming::generateControlBits()
