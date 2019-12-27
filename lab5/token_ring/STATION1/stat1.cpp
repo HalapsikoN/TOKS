@@ -226,9 +226,9 @@ int main()
 		{
 			srand(time(NULL));
 			int num = rand() % 100;
-			//cout << num<<endl;
+			
 			wantToSend = ((num>80) ? true : false);
-			//cout << wantToSend << endl;
+			
 		}
 
 		string str = (string)szBuf3;
@@ -238,8 +238,7 @@ int main()
 		{
 			if (wantToSend)
 			{
-				//cout << "state 1" << endl;
-
+		
 				toSend += DELIMETER+SPACE;
 				toSend += AC + SPACE;
 				srand(time(NULL));
@@ -253,8 +252,7 @@ int main()
 			}
 			else
 			{
-				//cout << "state 2" << endl;
-
+			
 				toSend = EMPTY_TOKEN;
 			}
 		}
@@ -262,8 +260,7 @@ int main()
 		{
 			if (getString(str, 3) == SA)
 			{
-				//cout << "state 3" << endl;
-
+				
 				string info = getINFO(str, DELIMETER);
 				cout << "GOT MESSAGE   :   " << info << endl;
 				toSend += getAllPackage(str, DELIMETER)+SPACE;
@@ -276,20 +273,17 @@ int main()
 			{
 				if (getString(str, 4) == SA)
 				{
-					//cout << "state 4" << endl;
-
+					
 					FS = getFS(str, DELIMETER);
 					bitset<6> temp(FS);
 					if (temp.to_ulong() == 54)
 					{
-						//cout << "state 5" << endl;
 						wantToSend = false;
 						toSend = EMPTY_TOKEN;
 					}
 					else
 					{
-						//cout << "state 6" << endl;
-
+						
 						toSend += DELIMETER + SPACE;
 						toSend += AC + SPACE;
 						toSend += DA + SPACE;
@@ -302,8 +296,7 @@ int main()
 				}
 				else
 				{
-					//cout << "state 7" << endl;
-
+					
 					toSend = str;
 				}
 			}

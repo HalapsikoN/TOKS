@@ -41,6 +41,7 @@ char Heming::getNumber()
 void Heming::flipNumberAt(int i)
 {
 	this->number.flip(i);
+	cout << "Changed: " << number << endl;
 }
 
 void Heming::countWords()
@@ -87,7 +88,8 @@ void Heming::writeNumberToCode()
 		}
 		//cout << "TYT:" << result << endl;
 	}
-	cout <<"TYT:"<< result << endl;
+	if (result != 0)
+	cout <<"ORIGINAL:"<< result << endl;
 }
 
 void Heming::generateControlBits()
@@ -113,7 +115,8 @@ void Heming::generateControlBits()
 		//cout << endl;
 		result[controlSlot] = (numberOfOne % 2 == 0) ? 0 : 1;
 	}
-	cout << "Before sending: "<<result << endl;
+	if (result != 0)
+	cout << "Before sending(cdoed in Heming): "<<result << endl;
 }
 
 uint16_t Heming::code()
@@ -146,7 +149,8 @@ void Heming::generateControlBitsToCheck()
 		}
 		//cout << endl;
 		result[nControlSlot] = (numberOfOne % 2 == 0) ? 0 : 1;
-	}
+	} 
+	if(result!=0)
 	cout << "After sending: "<< result << endl;
 }
 
@@ -166,6 +170,7 @@ void Heming::checkForMistakes()
 		}
 	}
 
+	if (result != 0)
 	switch (numberOfDiffrentBits)
 	{
 	case 0:

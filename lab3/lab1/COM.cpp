@@ -261,9 +261,17 @@ void COM::ReadHeming(uint8_t* data) {
 	{
 		Read(&temp, 2);
 		//std::cout << (temp) << std::endl;
-		Heming heming(8, temp);
-		//heming.flipNumberAt(2);
-		*(data + i) = heming.decode();
+		if (temp != '\0')
+		{
+			Heming heming(8, temp);
+			heming.flipNumberAt(11);
+			*(data + i) = heming.decode();
+		}
+		else
+		{
+			Heming heming(8, temp);
+			*(data + i) = heming.decode();
+		}
 	}
 	*(data + i) = '\0';
 	//cout << data << endl;

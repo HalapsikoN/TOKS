@@ -161,6 +161,8 @@ void COM::WritePackage(const uint8_t* data) {
 			i++;
 		}
 	}
+	
+	cout <<"Ready packkage: "<< temp<<temp[last] << endl;
 
 	for (i = 0; i <= last; ++i) {
 		Write((uint8_t*)&temp[i], 1);

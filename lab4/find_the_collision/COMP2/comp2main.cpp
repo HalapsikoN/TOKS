@@ -64,7 +64,7 @@ int main()
 		cout << endl;
 		strcpy_s(szBuf, startMessage);
 		int timeDelay = delay(100, 100 * pow(2, attempt));
-		cout << timeDelay << endl;
+		cout << "WAIT TIME:" << timeDelay << endl;
 		Sleep(timeDelay);
 		WriteFile(hNamedPipe2, szBuf, BUFSIZ, &cbWritten, NULL);
 		WaitForSingleObject(hSemaphore2, INFINITE);
